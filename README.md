@@ -1,4 +1,4 @@
-tangledstrings
+Tangled Strings - vim plugin
 ==============
 
 Vim Plugin for detection of Puppet management.
