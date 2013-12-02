@@ -44,7 +44,7 @@ can be enabled with something like:
 
 Here are the available configuration options and their defaults:
 >
-	let g:tangledstringsAlerts = 1
+	let g:tangledstringsAlerts = 0
 	let g:tangledstringsWarnTxt = "WARNING: PUPPED MANAGED FILE"
 	let g:tangledstringsNormTxt = ""
 

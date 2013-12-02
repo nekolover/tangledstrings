@@ -18,11 +18,11 @@ let tangledstrings_loaded = '1.0'
 " Defaults for misc settings {{{
 "
 if !exists( 'g:tangledstringsAlerts' )
-        let g:tangledstringsAlerts = 1
+        let g:tangledstringsAlerts = 0
 endif
 
 if !exists( 'g:tangledstringsWarnTxt' )
-	let g:tangledstringsWarnTxt = "WARNING: PUPPET MANAGED FILE"
+	let g:tangledstringsWarnTxt = "WARNING: PUPPET MANAGED FILE !! ALL CHANGES WILL BE ERASED !!"
 endif
 
 if !exists( 'g:tangledstringsNormTxt' )
@@ -45,8 +45,8 @@ function! TangledStringsState()
 endfunction
 
 
-" }}}
-" TangledStringsRefreshCache() {{{
+"  }}}
+"  TangledStringsRefreshCache() {{{
 "
 " Populate the global dictionary with the current puppet managed files
 "
@@ -88,7 +88,7 @@ function! <SID>TangledStringsAlert()
 	endif
 endfunction
 
-" }}}
+ " }}}
 " Refresh the rev for the current buffer on reads/writes. {{{
 "
 if g:tangledstringsAlerts == 1
@@ -101,3 +101,7 @@ if g:tangledstringsAlerts == 1
 endif
 " }}}
 
+" Defaults
+hi StatusLine ctermfg=black ctermbg=cyan
+set laststatus=2
+set statusline=%{TangledStringsState()}
