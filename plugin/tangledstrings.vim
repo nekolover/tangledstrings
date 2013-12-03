@@ -102,6 +102,6 @@ endif
 " }}}
 
 " Defaults
-hi StatusLine ctermfg=black ctermbg=cyan
+hi StatusLine ctermbg=red ctermfg=white
 set laststatus=2
 set statusline=%{TangledStringsState()}
